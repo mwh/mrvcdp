@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "ESM",
+    "exclude": ["js/***"],
+    "compilerOptions": {
+      "target": "es2021",
+      "module": "es2022",
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "outDir": "./js",
+      "noImplicitAny": true,
+      "strictFunctionTypes": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "strictPropertyInitialization": true,
+      "strictNullChecks": true
+    }
+}

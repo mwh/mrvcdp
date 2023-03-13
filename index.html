@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subduct</title>
+    <style type="text/css">
+        :root, body {
+            margin: 0;
+        }
+        .waypoint {
+            fill: #0000;
+        }
+        .waypoint:hover {
+            fill: white;
+            stroke: black;
+            stroke-width: 3px;
+        }
+        .input-type-label {
+            display: none;
+        }
+        .input-sobriquet:hover + .input-type-label {
+            display: inline;
+        }
+        .input-sobriquet, .type-label, .output-sobriquet {
+            cursor: default;
+        }
+        body {
+            min-height: 100vh;
+        }
+        /* svg {
+            width: 100%;
+            overflow-x: scroll;
+        } */
+        .grid-waypoint {
+            transition: opacity 0.5s;
+        }
+        #source-area {
+            overflow-x: auto;
+        }
+        #tab-bar {
+            list-style-type: none;
+            padding: 0;
+            padding-left: 1px;
+            margin: 0;
+            grid-area: tb;
+            border-bottom: 2px solid black;
+            border-collapse: collapse;
+        }
+        #tab-bar > li {
+            border: 2px solid #555;
+            display: inline-block;
+            padding: 8px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            margin: 0;
+            border-collapse: collapse;
+            margin-bottom: -2px;
+            border-bottom-color: black;
+            cursor: pointer;
+        }
+        #program-area {
+            display: flex;
+        }
+        #output-area {
+            max-width: 20%;
+            border-left: 1px solid black;
+        }
+        .grid-output-port:not(.connected):hover > path, .grid-waypoint:not(.connected):hover > path {
+            fill: lightgreen;
+        }
+        ul.menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        ul.menu > li.extra {
+            background: #eef;
+        }
+        ul.menu > li.function {
+            background: #ddd;
+        }
+        ul.menu > li:hover {
+            background: black;
+            color: white;
+        }
+        g.selected > path {
+            fill: green;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <label for="render_mode_text"><input type="radio" name="render_mode" id="render_mode_text" value="text">Text</label>
+        <label for="render_mode_grid"><input type="radio" name="render_mode" id="render_mode_grid" value="grid">Grid</label>
+        <label for="render_mode_graph"><input type="radio" name="render_mode" id="render_mode_graph" value="graph">Graph</label>
+        <!--<input type="button" id="animate-switch" value="Animate">-->
+        <input type="text" id="concat-entry" style="flex: 1" value="&quot;test&quot; dup concat 1 2 add 3 mul 4 double sub swap length add dup dup dup dup add mul sub add">
+        <input type="file" id="file-input" >
+        <select id="row-select"></select>
+        <button id="run-all">Results</button>
+    </div>
+    <ol id="tab-bar"><li>Main</li></ol>
+    <div id="program-area">
+    <div id="source-area">
+        <svg id="progSVG" style="height: 100vh;"></svg>
+    </div>
+    <div id="output-area">
+        <div id="output">hello</div>
+    </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
