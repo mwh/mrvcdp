@@ -1,0 +1,19 @@
+authors:
+- family-names: "Homer"
+  given-names: "Michael"
+  orcid: "https://orcid.org/0000-0003-0280-6748"
+title: "Multiple-Representation Visual Compositional Dataflow Programming"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Homer"
+    given-names: "Michael"
+    orcid: "https://orcid.org/0000-0003-0280-6748"
+  title: "Multiple-Representation Visual Compositional Dataflow Programming"
+  conference:
+    name: "Programming Experience Workshop"
+    date-start: 2023-03-14
+    date-end: 2023-03-14
+    city: "Tokyo"
+    country: "Japan"
+  doi: "10.1145/3594671.3594681"
